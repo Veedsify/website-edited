@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;610;700&display=swap');
+
+$button-color: rgb(0, 162, 255);
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 9vh;
+}
+
+#site{
+    padding: 0 3em;
+    background: rgb(163, 251, 247);
+    width: 100%;
+    height: auto;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: quicksand;
+    
+}
+.favicon{
+    border-radius: 50%;
+}
+
+
+.navbar{
+    width: 100%;
+    height: 8vh;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3px 3px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 0 10px grey;
+    
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+nav button{
+    background: none;
+    border: none;
+    padding: .75em 1em;
+    position: relative;
+}
+.nav-btn-more{
+    position: relative;
+    cursor: pointer;
+}
+nav button, nav button a{
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+nav button span {
+    transition: .3s;
+    position: absolute;
+    height: .2em;
+    width: 0%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav button:hover span {
+    position: absolute;
+    height: .2em;
+    width: 100%;
+    background: rgb(0, 119, 255);
+}
+.more > ul{
+    position: absolute;
+    transform: translateY(.6em);
+    list-style: none;
+    width: 15em;
+    height: 15em;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(236, 236, 236);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: .3s;
+}
+
+.more > button{
+    cursor: pointer;
+}
+
+.more > button:focus span{
+    height: .2em;
+    width: 100%;
+    background: green;
+}
+
+.more > button:focus + ul{
+    pointer-events: all;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.more > ul li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: .3s;
+}
+
+.more > ul li:hover{
+    background: rgba(9, 83, 219, 0.472);
+}
+.more > ul li:hover:first-child{
+    border-radius: 5px 5px 0 0;
+}
+
+.more > ul li:hover:last-child{
+    border-radius: 0 0 5px 5px ;
+}
+
+
+
+.more > ul li > a{
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.navbar .logo {
+    height: 100%;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.navbar .logo:hover{
+    filter: saturate(0);
+}
+
+.navbar > a{
+    height: inherit;
+}
+
+.active-head span{
+    height: .2em;
+    width: 100%;
+    background: rgb(255, 0, 0);
+}
+
+#done{
+    position: absolute;
+    display: inline;
+    align-items: center;
+}
+
+/* Hero Sections Here */
+
+.hero{
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    margin-top: 8.5vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "" ;
+    grid-template-columns: 1fr 1fr;
+    .hero-container{
+        border: 1px solid;
+        &:first-child{
+            grid-area: r;
+        }
+    }
+}

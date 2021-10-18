@@ -1,0 +1,16 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #ff2222;
+}
+
+@media screen and (max-width:768px) {
+    
+}
